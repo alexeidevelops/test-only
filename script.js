@@ -1,6 +1,8 @@
 const unselect = () => {
-  const selected = document.querySelector(".active");
-  selected.classList.remove("active");
+  const selected = document.querySelectorAll(".active");
+  selected.forEach((item) => {
+    item.classList.remove("active");
+  });
 };
 
 const handleClick = (e) => {
@@ -8,8 +10,9 @@ const handleClick = (e) => {
   if (marker) {
     if (marker.classList.contains("active")) {
       unselect();
-      return
+      return;
     } else {
+      unselect();
       marker.classList.add("active");
       return;
     }
