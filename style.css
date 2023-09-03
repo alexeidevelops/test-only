@@ -4,6 +4,8 @@ body, html {
     height: 100%;
     overflow: hidden;
     background-color: black;
+    font-family: sans-serif;
+    color: white;
 }
 
 /* Image overlay */
@@ -39,9 +41,38 @@ body, html {
 
 .marker {
     position: absolute;
-    width: 40px;
+    display: flex;
     height: 40px;
+    font-size: 12px;
+}
+
+.selected {
+    display: none;
+
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    padding-left: 12px;
+    padding-right: 10px;
+    height: 30px;
+    background: #3877EE;
+    border-radius: 100px;
+}
+
+.active .selected{
+    display: flex;
+}
+
+.marker button {
+    width: 30px;
+    height: 30px;
     background: #3877EE;
     opacity: 0.7;
     border-radius: 50%;
+    border: none;
+}
+
+.marker img {
+    width: 8px;
 }
